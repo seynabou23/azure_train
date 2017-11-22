@@ -61,33 +61,33 @@ print('Now let\'s add some entries to our Table.\nRemember, Azure Storage Tables
 raw_input('Press Enter to continue...')
 
 # Each entry in a Table is called an 'Entity'. 
-# Here, we add an entry for first pizza with two pieces of data - the name, and the cost
+# Here, we add an entry for first Auto with two pieces of data - the name, and the cost
 #
 # A partition key tracks how like-minded entries in the Table are created and queried.
 # A row key is a unique ID for each entity in the partition
 # These two properties are used as a primary key to index the Table. This makes queries much quicker.
 
-pizza = Entity()
-pizza.PartitionKey = 'cars'
-pizza.RowKey = '001'
-pizza.description = 'Toyota'
-pizza.cost = 27000
+Auto = Entity()
+Auto.PartitionKey = 'cars'
+Auto.RowKey = '001'
+Auto.description = 'Toyota'
+Auto.cost = 27000
 table_service.insert_entity('itemstable', Auto)
 print('Created entry for Toyota...')
 
-pizza = Entity()
-pizza.PartitionKey = 'cars'
-pizza.RowKey = '002'
-pizza.description = 'Mazda'
-pizza.cost = 24000
+Auto = Entity()
+Auto.PartitionKey = 'cars'
+Auto.RowKey = '002'
+Auto.description = 'Mazda'
+Auto.cost = 24000
 table_service.insert_entity('itemstable', Auto)
 print('Created entry for Mazda...')
 
-pizza = Entity()
-pizza.PartitionKey = 'cars'
-pizza.RowKey = '003'
-pizza.description = 'Hundai'
-pizza.cost = 21000
+Auto = Entity()
+Auto.PartitionKey = 'cars'
+Auto.RowKey = '003'
+Auto.description = 'Hundai'
+Auto.cost = 21000
 table_service.insert_entity('itemstable', Auto)
 print('Created entry for Hundai...\n')
 
@@ -95,22 +95,22 @@ print('Created entry for Hundai...\n')
 # A row key is a unique ID for each entity in the partition
 # These two properties are used as a primary key to index the Table. This makes queries much quicker.
 
-clothing = Entity()
-clothing.PartitionKey = 'coffee'
-clothing.RowKey = '005'
-clothing.sku = 'BLACK01'
-clothing.item = 'Noiceur'
-clothing.cost = 39
+coffee = Entity()
+coffee.PartitionKey = 'coffee'
+coffee.RowKey = '005'
+coffee.sku = 'BLACK01'
+coffee.item = 'Noiceur'
+coffee.cost = 39
 table_service.insert_entity('itemstable', coffee)
 print('Created entry for a Noiceur...\n')
 time.sleep(1)
 
-clothing = Entity()
-clothing.PartitionKey = 'coffee'
-clothing.RowKey = '006'
-clothing.sku = 'NOIS003'
-clothing.item = 'Noisette'
-clothing.cost = 15
+coffee = Entity()
+coffee.PartitionKey = 'coffee'
+coffee.RowKey = '006'
+coffee.sku = 'NOIS003'
+coffee.item = 'Noisette'
+coffee.cost = 15
 table_service.insert_entity('itemstable', coffee)
 print('Created entry for Noisette...\n')
 time.sleep(1)
